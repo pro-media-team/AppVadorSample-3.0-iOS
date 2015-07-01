@@ -33,6 +33,7 @@ typedef enum : NSInteger {
 - (void) load;
 - (void) showAdForView:(UIView *)view;
 - (void) showAdForView:(UIView *)view withRect:(CGRect)rect;
+- (void) removeAd;
 
 #pragma mark player callbacks
 - (void) didPlaying;
@@ -44,6 +45,7 @@ typedef enum : NSInteger {
 - (void) didClose;
 - (void) onAdViewVisible;
 - (void) onAdViewInvisible;
+- (void) didReadyToPlayAd;
 - (void) didFailedToPlayAd:(NSObject *)error;
 
 @end
