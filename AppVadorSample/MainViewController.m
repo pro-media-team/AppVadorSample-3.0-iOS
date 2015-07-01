@@ -23,14 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // test "be799a9af42fd94b851539335d3713ab"
-    // scaleout "2ed7bf2abc4130eca582aae77bcd35db"
-    // dev "6bbbe1585dc2be1962a437db80636d01", Env.DEVELOPMENT
-    
-    self.ad = [[APVAdManager alloc] initWithPubId:@"6bbbe1585dc2be1962a437db80636d01"
-                                     withDelegate:self
-                                          withEnv:APV_ENV_DEVELOPMENT];
+
+    self.ad = [[APVAdManager alloc] initWithPubId:@"be799a9af42fd94b851539335d3713ab" withDelegate:self];
     self.ad.preloadType = APV_PRELOAD_ALL;
     self.ad.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5f];
     [self.ad load];
