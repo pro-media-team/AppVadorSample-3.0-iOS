@@ -14,6 +14,13 @@ iOS6.1以降の端末で正常に動作します。
 --------
 
 SDK(AppVadorSDK.framework)をプロジェクトに追加し、Linked Frameworks and Libraryies へ AppVadorSDK.frameworkを追加します。
+
+必要なフレームワークを追加します。
+
+- AdSupport.framework
+- CoreTelephony.framework
+- CoreMedia.framework
+- AVFoundation.framework
 ￼
 ワイドビュービデオ広告
 ----------------------
@@ -155,6 +162,9 @@ APVAdManagerDelegateを実装してください。
 
 リリースノート
 ---------------
+
+### 2015/07/07 3.0
+- 再生完了後の表示内容を調整
 
 ### 2015/07/03 3.0
 - フルスクリーンプレイヤーの仕様をAndroidと統一
