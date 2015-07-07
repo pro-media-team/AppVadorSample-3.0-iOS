@@ -21,6 +21,7 @@ SDK(AppVadorSDK.framework)をプロジェクトに追加し、Linked Frameworks 
 - CoreTelephony.framework
 - CoreMedia.framework
 - AVFoundation.framework
+
 ￼
 ワイドビュービデオ広告
 ----------------------
