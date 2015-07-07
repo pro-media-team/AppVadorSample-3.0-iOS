@@ -10,7 +10,6 @@
 #import "MainViewController.h"
 
 @interface MainViewController () {
-    
 }
 
 @property APVAdManager *ad;
@@ -23,11 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.ad = [[APVAdManager alloc] initWithPubId:@"be799a9af42fd94b851539335d3713ab" withDelegate:self];
-    self.ad.preloadType = APV_PRELOAD_ALL;
-    self.ad.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5f];
-    [self.ad load];
+    self.title = @"Sample (ScrollView)";
     
     self.containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 1024)];
     [self.scrollView addSubview: self.containerView];
@@ -35,10 +30,37 @@
     
     self.adView = [[UIView alloc] initWithFrame:CGRectMake(10, 100, 300, 250)];
     [self.containerView addSubview: self.adView];
+    
+    UIButton *showAdButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    showAdButton.frame = CGRectMake(0, 0, 320, 50);
+    [showAdButton setTitle:@"ShowAd" forState:UIControlStateNormal];
+    [showAdButton addTarget:self action:@selector(showAd) forControlEvents:UIControlEventTouchDown];
+    [self.containerView addSubview:showAdButton];
+    
+    [self initAd];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)showAd
+{
+    [self initAd];
+}
+
+- (void)initAd
+{
+    if (self.ad != nil) {
+        [self.ad removeAd];
+        self.ad = nil;
+    }
+    
+    // production demo "be799a9af42fd94b851539335d3713ab"
+    self.ad = [[APVAdManager alloc] initWithPubId:@"be799a9af42fd94b851539335d3713ab" withDelegate:self];
+    self.ad.preloadType = APV_PRELOAD_META;
+    self.ad.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5f];
+    [self.ad load];
 }
 
 # pragma APVAdManagerDelegate
@@ -64,32 +86,32 @@
 
 - (void)onPlayingAd
 {
-    
+    NSLog(@"[MainViewController] playing");
 }
 
 - (void)onMuteAd
 {
-    
+    NSLog(@"[MainViewController] mute");
 }
 
 - (void)onUnmuteAd
 {
-    
+    NSLog(@"[MainViewController] unmute");
 }
 
 - (void)onCompletionAd
 {
-    
+    NSLog(@"[MainViewController] complete");
 }
 
 - (void)onClickAd
 {
-    
+    NSLog(@"[MainViewController] click");
 }
 
 - (void)onCloseAd
 {
-    
+    NSLog(@"[MainViewController] close");
 }
 
 @end
