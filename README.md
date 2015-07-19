@@ -78,6 +78,22 @@ APVAdManagerクラスには広告の準備が完了しているかどうかを�
         NSLog(@"ad is not ready");
     }
 
+動画広告には、タップ後に全画面プレイヤーを起動する仕様があります。
+APVAdManagerDelegate.viewControllerForPresentingModalViewを実装してください。
+戻り値には必ず現在のviewControllerを指定してください。
+
+    @interface MainViewController : UIViewController<APVAdManagerDelegate> {
+
+    }
+
+    @implementation MainViewController
+
+    - (UIViewController *)viewControllerForPresentingModalView
+    {
+        return currentViewController;
+    }
+
+
 高速再生モードの利用
 --------------------
 
