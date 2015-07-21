@@ -57,8 +57,11 @@
     }
     
     // production demo "be799a9af42fd94b851539335d3713ab"
-    self.ad = [[APVAdManager alloc] initWithPubId:@"be799a9af42fd94b851539335d3713ab" withDelegate:self];
-    self.ad.preloadType = APV_PRELOAD_META;
+//    self.ad = [[APVAdManager alloc] initWithPubId:@"be799a9af42fd94b851539335d3713ab" withDelegate:self];
+    self.ad = [[APVAdManager alloc] initWithPubId:@"58a14624caca34eacc221b6c6520ff43"
+                                     withDelegate:self
+                                          withEnv:APV_ENV_PRODUCTION];
+    self.ad.preloadType = APV_PRELOAD_ALL;
     self.ad.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5f];
     [self.ad load];
 }
