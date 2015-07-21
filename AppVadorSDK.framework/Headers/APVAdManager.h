@@ -43,6 +43,7 @@ typedef enum : NSInteger {
 - (void) didUnmute;
 - (void) didMute;
 - (void) didClose;
+- (void) didReplay;
 - (void) onAdViewVisible;
 - (void) onAdViewInvisible;
 - (void) didReadyToPlayAd;
@@ -63,6 +64,10 @@ typedef enum : NSInteger {
 - (void) onCloseAd;
 - (void) onFailedToPlayAd:(NSObject *)error;
 
+@optional
+- (void) onReplayAd;
+
+@required
 - (UIViewController *)viewControllerForPresentingModalView;
 
 @end
