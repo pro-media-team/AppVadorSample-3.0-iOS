@@ -26,7 +26,7 @@ typedef enum : NSInteger {
 @property (nonatomic, weak) id<APVAdManagerDelegate> delegate;
 @property (nonatomic) APVPreloadType preloadType;
 @property (nonatomic) UIColor *backgroundColor;
-@property (nonatomic, readonly) BOOL isReady;
+@property (nonatomic) BOOL isReady;
 
 - (id) initWithPubId:(NSString *) pubId withDelegate:(id<APVAdManagerDelegate>) delegate;
 - (id) initWithPubId:(NSString *) pubId withDelegate:(id<APVAdManagerDelegate>) delegate withEnv: (APVEnv) env;
@@ -34,6 +34,7 @@ typedef enum : NSInteger {
 - (void) showAdForView:(UIView *)view;
 - (void) showAdForView:(UIView *)view withRect:(CGRect)rect;
 - (void) removeAd;
+- (UIView *)getCurrentAdView;
 
 #pragma mark player callbacks
 - (void) didPlaying;
@@ -44,8 +45,6 @@ typedef enum : NSInteger {
 - (void) didMute;
 - (void) didClose;
 - (void) didReplay;
-- (void) onAdViewVisible;
-- (void) onAdViewInvisible;
 - (void) didReadyToPlayAd;
 - (void) didFailedToPlayAd:(NSObject *)error;
 
@@ -55,6 +54,8 @@ typedef enum : NSInteger {
 
 @protocol APVAdManagerDelegate <NSObject>
 
+@optional
+- (void) onReadyToPlayAd:(APVAdManager *)ad;
 - (void) onReadyToPlayAd;
 - (void) onPlayingAd;
 - (void) onCompletionAd;
@@ -62,10 +63,8 @@ typedef enum : NSInteger {
 - (void) onUnmuteAd;
 - (void) onMuteAd;
 - (void) onCloseAd;
-- (void) onFailedToPlayAd:(NSObject *)error;
-
-@optional
 - (void) onReplayAd;
+- (void) onFailedToPlayAd:(NSObject *)error;
 
 @required
 - (UIViewController *)viewControllerForPresentingModalView;

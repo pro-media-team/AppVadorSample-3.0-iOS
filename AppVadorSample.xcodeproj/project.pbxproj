@@ -15,13 +15,14 @@
 		311C61191A074C8E00FB5286 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 311C61181A074C8E00FB5286 /* Images.xcassets */; };
 		311C611C1A074C8E00FB5286 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 311C611A1A074C8E00FB5286 /* LaunchScreen.xib */; };
 		311C61281A074C8E00FB5286 /* AppVadorDevTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 311C61271A074C8E00FB5286 /* AppVadorDevTests.m */; };
-		316ED0B11B3C0A9C006A06A7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 316ED0B01B3C0A9C006A06A7 /* MainViewController.m */; };
-		316ED0B41B3C0B95006A06A7 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 316ED0B31B3C0B95006A06A7 /* SecondViewController.m */; };
+		316ED0B11B3C0A9C006A06A7 /* NormalStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 316ED0B01B3C0A9C006A06A7 /* NormalStyleViewController.m */; };
+		316ED0B41B3C0B95006A06A7 /* InFeedStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 316ED0B31B3C0B95006A06A7 /* InFeedStyleViewController.m */; };
 		317D50E91A078C85003A2AF4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 317D50E81A078C85003A2AF4 /* AdSupport.framework */; };
 		317D50F31A0797E5003A2AF4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 317D50F21A0797E5003A2AF4 /* CoreTelephony.framework */; };
 		317D50F51A079804003A2AF4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 317D50F41A079804003A2AF4 /* SystemConfiguration.framework */; };
 		317D51061A0AC199003A2AF4 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 317D51051A0AC199003A2AF4 /* CoreMedia.framework */; };
 		317D51081A0AC19E003A2AF4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 317D51071A0AC19E003A2AF4 /* AVFoundation.framework */; };
+		31AD6AC71B666EB00094B08F /* InterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AD6AC61B666EB00094B08F /* InterstitialViewController.m */; };
 		31B5D3C01B4310EC00681A28 /* AppVadorSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B5D3BF1B4310EC00681A28 /* AppVadorSDK.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,16 +64,18 @@
 		311C61211A074C8E00FB5286 /* AppVadorSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppVadorSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		311C61261A074C8E00FB5286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		311C61271A074C8E00FB5286 /* AppVadorDevTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppVadorDevTests.m; sourceTree = "<group>"; };
-		316ED0AF1B3C0A73006A06A7 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		316ED0B01B3C0A9C006A06A7 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		316ED0B21B3C0B7B006A06A7 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		316ED0B31B3C0B95006A06A7 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		316ED0AF1B3C0A73006A06A7 /* NormalStyleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalStyleViewController.h; sourceTree = "<group>"; };
+		316ED0B01B3C0A9C006A06A7 /* NormalStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalStyleViewController.m; sourceTree = "<group>"; };
+		316ED0B21B3C0B7B006A06A7 /* InFeedStyleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InFeedStyleViewController.h; sourceTree = "<group>"; };
+		316ED0B31B3C0B95006A06A7 /* InFeedStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InFeedStyleViewController.m; sourceTree = "<group>"; };
 		317D50E61A078A4B003A2AF4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		317D50E81A078C85003A2AF4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		317D50F21A0797E5003A2AF4 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		317D50F41A079804003A2AF4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		317D51051A0AC199003A2AF4 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		317D51071A0AC19E003A2AF4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		31AD6AC51B666EA40094B08F /* InterstitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterstitialViewController.h; sourceTree = "<group>"; };
+		31AD6AC61B666EB00094B08F /* InterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterstitialViewController.m; sourceTree = "<group>"; };
 		31B5D3BF1B4310EC00681A28 /* AppVadorSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppVadorSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,15 +135,17 @@
 				311C610D1A074C8D00FB5286 /* AppDelegate.m */,
 				311C61121A074C8D00FB5286 /* MainController.h */,
 				311C61131A074C8D00FB5286 /* MainController.m */,
-				316ED0AF1B3C0A73006A06A7 /* MainViewController.h */,
-				316ED0B01B3C0A9C006A06A7 /* MainViewController.m */,
+				316ED0AF1B3C0A73006A06A7 /* NormalStyleViewController.h */,
+				316ED0B01B3C0A9C006A06A7 /* NormalStyleViewController.m */,
+				316ED0B21B3C0B7B006A06A7 /* InFeedStyleViewController.h */,
+				316ED0B31B3C0B95006A06A7 /* InFeedStyleViewController.m */,
+				31AD6AC51B666EA40094B08F /* InterstitialViewController.h */,
+				31AD6AC61B666EB00094B08F /* InterstitialViewController.m */,
 				311C61151A074C8D00FB5286 /* Main.storyboard */,
 				311C61181A074C8E00FB5286 /* Images.xcassets */,
 				311C611A1A074C8E00FB5286 /* LaunchScreen.xib */,
 				311C610F1A074C8D00FB5286 /* AppVadorSample.xcdatamodeld */,
 				311C61081A074C8D00FB5286 /* Supporting Files */,
-				316ED0B21B3C0B7B006A06A7 /* SecondViewController.h */,
-				316ED0B31B3C0B95006A06A7 /* SecondViewController.m */,
 			);
 			path = AppVadorSample;
 			sourceTree = "<group>";
@@ -273,11 +278,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				316ED0B41B3C0B95006A06A7 /* SecondViewController.m in Sources */,
+				316ED0B41B3C0B95006A06A7 /* InFeedStyleViewController.m in Sources */,
 				311C610E1A074C8D00FB5286 /* AppDelegate.m in Sources */,
 				311C610B1A074C8D00FB5286 /* main.m in Sources */,
 				311C61141A074C8D00FB5286 /* MainController.m in Sources */,
-				316ED0B11B3C0A9C006A06A7 /* MainViewController.m in Sources */,
+				31AD6AC71B666EB00094B08F /* InterstitialViewController.m in Sources */,
+				316ED0B11B3C0A9C006A06A7 /* NormalStyleViewController.m in Sources */,
 				311C61111A074C8D00FB5286 /* AppVadorSample.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainController.h
 //  AppVadorDev
 //
 //  Created by Hirohide Sano on 2014/11/03.
@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <AppVadorSDK/APVAdManager.h>
 
-@interface MainController : UITabBarController {
+@interface MainController : UITableViewController<UITableViewDataSource> {
 
 }
+
 @end
