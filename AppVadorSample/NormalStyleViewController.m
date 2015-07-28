@@ -6,7 +6,6 @@
 //  Copyright (c) 2014年 AppVador Inc. All rights reserved.
 //
 
-#import <AppVadorSDK/APVAdManager.h>
 #import "NormalStyleViewController.h"
 
 @interface NormalStyleViewController () {
@@ -26,29 +25,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Normal Style";
-    
+
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     self.scrollView.contentSize = CGSizeMake(320, 1024);
     [self.view addSubview:self.scrollView];
-    
+
     self.containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 2048)];
     self.containerView.backgroundColor = [UIColor whiteColor];
     [self.scrollView addSubview:self.containerView];
-    
+
     self.adView = [[UIView alloc] initWithFrame:CGRectMake(10, 100, 300, 250)];
     [self.containerView addSubview:self.adView];
-    
+
     self.statusLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, 320, 20)];
     self.statusLabel.textAlignment = NSTextAlignmentCenter;
     [self.containerView addSubview:self.statusLabel];
-    
+
     self.showButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     self.showButton.frame = CGRectMake(0, 0, 320, 50);
     self.showButton.enabled = NO;
     [self.showButton setTitle:@"ShowAd" forState:UIControlStateNormal];
     [self.showButton addTarget:self action:@selector(showAd) forControlEvents:UIControlEventTouchDown];
     [self.containerView addSubview:self.showButton];
-    
+
     [self initAd];
 }
 
@@ -63,7 +62,7 @@
         [self.ad removeAd];
         self.ad = nil;
     }
-    
+
     // publication id for demo
     self.ad = [[APVAdManager alloc] initWithPubId:@"59d43dad47785b027efc76ef6013c9af" withDelegate:self];
     self.ad.preloadType = APV_PRELOAD_ALL;
