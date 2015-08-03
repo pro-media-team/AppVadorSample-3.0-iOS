@@ -54,6 +54,9 @@ typedef enum : NSInteger {
 
 @protocol APVAdManagerDelegate <NSObject>
 
+@required
+- (UIViewController *)viewControllerForPresentingModalView;
+
 @optional
 - (void) onReadyToPlayAd:(APVAdManager *)ad;
 - (void) onReadyToPlayAd;
@@ -65,8 +68,5 @@ typedef enum : NSInteger {
 - (void) onCloseAd;
 - (void) onReplayAd;
 - (void) onFailedToPlayAd:(NSObject *)error;
-
-@required
-- (UIViewController *)viewControllerForPresentingModalView;
 
 @end
