@@ -13,6 +13,7 @@
 
 @property (nonatomic) APVAdManager *ad1;
 @property (nonatomic) APVAdManager *ad2;
+@property (nonatomic) NSMutableArray *ads;
 
 @end
 
@@ -31,6 +32,15 @@
     self.ad2 = [[APVAdManager alloc] initWithPubId:@"59d43dad47785b027efc76ef6013c9af" withDelegate:self];
     self.ad2.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5f];
     [self.ad2 load];
+    
+    self.ads = [[NSMutableArray alloc] init];
+    for (int i = 0; i < 10; i++) {
+        APVAdManager *ad = [[APVAdManager alloc] initWithPubId:@"59d43dad47785b027efc76ef6013c9af" withDelegate:self];
+        ad.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5f];
+        ad.preloadType = APV_PRELOAD_ALL;
+        [ad load];
+        [self.ads addObject:ad];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,6 +55,11 @@
     return self;
 }
 
+- (void)onReadyToPlayAd
+{
+    NSLog(@"onReadyToPlayAd");
+}
+
 # pragma UITableViewDataSource
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -53,7 +68,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 12;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,12 +76,18 @@
     UITableViewCell *cell;
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: @"apv"];
     // 3番目と6番目に動画枠を表示する。
-    if (indexPath.row == 2 && self.ad1.isReady) {
-        [self.ad1 showAdForView:cell withRect:CGRectMake(0, 0, 320, 180)];
-    } else if (indexPath.row == 5 && self.ad2.isReady) {
-        [self.ad2 showAdForView:cell withRect:CGRectMake(0, 0, 320, 180)];
+//    if (indexPath.row == 2 && self.ad1.isReady) {
+//        [self.ad1 showAdForView:cell withRect:CGRectMake(0, 0, 320, 180)];
+//    } else if (indexPath.row == 5 && self.ad2.isReady) {
+//        [self.ad2 showAdForView:cell withRect:CGRectMake(0, 0, 320, 180)];
+//    } else {
+//        cell.textLabel.text = [NSString stringWithFormat:@"test %d", (int)indexPath.item];
+//    }
+    APVAdManager *ad = [self.ads objectAtIndex:indexPath.row];
+    if (ad.isReady) {
+        [ad showAdForView:cell withRect:CGRectMake(0, 0, 320, 180)];
     } else {
-        cell.textLabel.text = [NSString stringWithFormat:@"test %d", (int)indexPath.item];
+        cell.textLabel.text = [NSString stringWithFormat:@"test %d", (int)indexPath.row];
     }
     
     return cell;
