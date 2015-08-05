@@ -20,6 +20,7 @@ typedef enum : NSInteger {
     APV_PRELOAD_ALL
 } APVPreloadType;
 
+@class APVAdView, APVAdConfiguration;
 @protocol APVAdManagerDelegate;
 @interface APVAdManager : NSObject
 
@@ -27,6 +28,8 @@ typedef enum : NSInteger {
 @property (nonatomic) APVPreloadType preloadType;
 @property (nonatomic) UIColor *backgroundColor;
 @property (nonatomic) BOOL isReady;
+@property (nonatomic) APVAdView *currentPlayer;
+@property (nonatomic) APVAdConfiguration *configuration;
 
 - (id) initWithPubId:(NSString *) pubId withDelegate:(id<APVAdManagerDelegate>) delegate;
 - (id) initWithPubId:(NSString *) pubId withDelegate:(id<APVAdManagerDelegate>) delegate withEnv: (APVEnv) env;
@@ -38,8 +41,10 @@ typedef enum : NSInteger {
 
 #pragma mark player callbacks
 - (void) didPlaying;
+- (void) didThroughSkipOffset;
 - (void) didCompletion;
 - (void) didClick;
+- (void) didClickThrough;
 - (void) didClickToFullscreen;
 - (void) didUnmute;
 - (void) didMute;
