@@ -1,10 +1,14 @@
 # AppVador SDK for iOS
 
-* [Download SDK](https://github.com/appvador/AppVadorSample-3.0-iOS/blob/master/SDK/AppVadorSDK.framework.3.08.zip?raw=true)
+* [Download SDK](https://github.com/appvador/AppVadorSample-3.0-iOS/blob/master/SDK/AppVadorSDK.framework.3.11.zip?raw=true)
 * [組込方法など（Wiki）](https://github.com/appvador/AppVadorSample-3.0-iOS/wiki)
 * [ライセンス](https://github.com/appvador/AppVadorSample-3.0-iOS/wiki/license)
 
 # リリースノート
+
+## 2016/06/16 3.11
+
+* バグフィックス
 
 ## 2015/09/07 3.06
 
